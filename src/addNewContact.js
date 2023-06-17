@@ -94,5 +94,13 @@ class Person{
     }
 }
 
+//To create person object
+const p1 = new Person("Kaif","Shaikh","Peace","Solapur","Maharashtra",413001,9887654578,"abc.kaif@bridgelabz.co.gmail");
+const p2 = new Person("Sam","Patil","Peace","Solapur","Maharashtra",413005,9511267527,"abc.sam@bridgelabz.co.yahoo");
 
-const p1 = new Person("Kif","Shaikh","Peace","Solapur","Maharashtra",413001,9887654578,"abc.kaif@bridgelabz.co.gmail");
+//UC3 To create array
+
+let addressBook = new Array();
+
+addressBook.push(p1);
+addressBook.push(p2);
