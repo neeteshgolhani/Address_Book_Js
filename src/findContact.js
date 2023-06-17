@@ -104,3 +104,38 @@ let addressBook = new Array();
 
 addressBook.push(p1);
 addressBook.push(p2);
+
+const p3 = new Person("Tanvir","Patil","Nigdi","Pune","Maharashtra",512004,8790765423,"abc.tanvir@bridgelabz.co.in");
+
+addressBook.push(p3);
+
+//UC4 To find existing person name and edit it
+
+let name = prompt("Enter name to find person");
+
+for (let person of addressBook) {
+    if (person._firstName === name) {
+        console.log("Person found");
+        let fname = prompt("Enter new first name");
+        person._firstName=fname;
+        let lname = prompt("Enter new last name");
+        person._lastName = lname;
+        let address1 = prompt("Enter new address name");
+        person._address= address1;
+        let city1 = prompt("Enter new city name");
+        person._city = city1;
+        let state1 = prompt("Enter new state name");
+        person._state = state1;
+        let zip1 = prompt("Enter new zip name");
+        person._zip = zip1;
+        let phoneNumber1 = prompt("Enter new Phone Number");
+        person._phoneNumber = phoneNumber1;
+        let email1 = prompt("Enter new emil");
+        person._email = email1;
+        console.log("Contact Updated successfully");
+    }
+    else{
+        console.log("Person not found");
+    }
+}
+console.log(addressBook);
