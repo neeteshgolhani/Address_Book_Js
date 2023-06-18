@@ -109,18 +109,30 @@ const p3 = new Person("Tanvir","Patil","Nigdi","Pune","Maharashtra",512004,87907
 
 addressBook.push(p3);
 
-//UC4 To find existing person name and edit it
+//To take input from user for address book we will check existing contacts does has similar name or  not
+let fname = prompt("Enter new first name");
 
-let name = prompt("Enter name to find person");
+//UC7To check for duplicate name in address book
 
-//To search the name in address book and find its index
-
-let index = addressBook.findIndex(person => {
-    return person._firstName===name
+let status = addressBook.reduce((status1,person) =>{
+    if(person._firstName===fname) status1="true"
+    return status1;
 });
 
-//To delete the contact which  we found 
-addressBook.splice(index,1);
-console.log("Contact deleted successfully");
+if(status==="true"){
+    fname = prompt("Duplicate Entry not allowed try another name");
+}
 
-console.log(addressBook);
+
+let lname = prompt("Enter new last name");
+let address1 = prompt("Enter new address name");
+let city1 = prompt("Enter new city name");
+let state1 = prompt("Enter new state name");
+let zip1 = prompt("Enter new zip name");
+let phoneNumber1 = prompt("Enter new Phone Number");
+let email1 = prompt("Enter new emil");
+        
+//To make person class object
+const p4 = new Person(fname,lname,address1,city1,state1,zip1,phoneNumber1,email1);
+
+addressBook.push(p4);
